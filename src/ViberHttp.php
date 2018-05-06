@@ -19,8 +19,9 @@ class ViberHttp
 
         return $client->request('POST', 'https://chatapi.viber.com/pa/send_message', [
             'headers'  => [
-                'X-Viber-Auth-Token' => $this->token,
-            ],
+            'X-Viber-Auth-Token' => '47bca6c092a7d347-64c1a84234dfb8e4-5d22517578332c91',
+            'Content-Type' => 'application/json'
+        ],
             GuzzleHttp\RequestOptions::JSON => [
                 'receiver' => $to,
                 'text' => $text,
