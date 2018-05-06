@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Application Test Suite" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.003092">
+    <testsuite name="NZX\NotificationChannels\Kannel\Test\KannelHTTPTest" file="/home/anton/Desktop/kannel/tests/KannelHTTPTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.003092">
+      <testcase name="it_sends_a_message_to_a_single_number" class="NZX\NotificationChannels\Kannel\Test\KannelHTTPTest" classname="NZX.NotificationChannels.Kannel.Test.KannelHTTPTest" file="/home/anton/Desktop/kannel/tests/KannelHTTPTest.php" line="28" assertions="1" time="0.003092"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
