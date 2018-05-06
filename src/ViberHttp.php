@@ -23,15 +23,13 @@ class ViberHttp
             ],
             'body'  => [
                 'receiver' => $to,
-                "sender" => [
-                    "name": $this->name,
-                    "avatar": $this->avatar_url,
+                'text' => $text,
+                'sender' => [
+                    'name' => $this->name,
+                    'avatar' => $this->avatar_url,
                 ],
-               'text' => $text,
                'type' => 'text',
             ]
         ]);
-        // return file_get_contents($send_url); //todo: use guzzle or curl
     }
-
 }
