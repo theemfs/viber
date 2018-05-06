@@ -3,6 +3,7 @@
 namespace NZX\NotificationChannels\Viber;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\RequestOptions;
 
 class ViberHttp
 {
@@ -22,7 +23,7 @@ class ViberHttp
             'X-Viber-Auth-Token' => '47bca6c092a7d347-64c1a84234dfb8e4-5d22517578332c91',
             'Content-Type' => 'application/json'
         ],
-            GuzzleHttp\RequestOptions::JSON => [
+            RequestOptions::JSON => [
                 'receiver' => $to,
                 'text' => $text,
                 'sender' => [
