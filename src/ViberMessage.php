@@ -30,7 +30,7 @@ class ViberMessage
 
     public function setTo($to)
     {
-        $this->to = static::filter($to);
+        $this->to = $to;
 
         return $this;
     }
