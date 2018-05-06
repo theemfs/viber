@@ -21,7 +21,7 @@ class ViberHttp
             'headers'  => [
                 'X-Viber-Auth-Token' => $this->token,
             ],
-            'body'  => [
+            GuzzleHttp\RequestOptions::JSON => [
                 'receiver' => $to,
                 'text' => $text,
                 'sender' => [
