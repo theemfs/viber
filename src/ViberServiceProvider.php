@@ -19,7 +19,8 @@ class ViberServiceProvider extends ServiceProvider
                 return new ViberHttp(
                     $config['token'],
                     $config['name'],
-                    $config['avatar_url']
+                    $config['avatar_url'],
+                    $config['proxy']
                 );
             });
     }

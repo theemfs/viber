@@ -7,11 +7,12 @@ use GuzzleHttp\RequestOptions;
 
 class ViberHttp
 {
-    public function __construct($token, $name, $avatar_url)
+    public function __construct($token, $name, $avatar_url, $proxy = null)
     {
         $this->token = $token;
         $this->name = $name;
         $this->avatar_url = $avatar_url;
+        $this->proxy = $proxy;
     }
 
     public function send($to, $text)
@@ -20,9 +21,10 @@ class ViberHttp
 
         return $client->request('POST', 'https://chatapi.viber.com/pa/send_message', [
             'headers'  => [
-            'X-Viber-Auth-Token' => '47bca6c092a7d347-64c1a84234dfb8e4-5d22517578332c91',
-            'Content-Type' => 'application/json'
-        ],
+                'X-Viber-Auth-Token' => '47bca6c092a7d347-64c1a84234dfb8e4-5d22517578332c91',
+                'Content-Type' => 'application/json'
+            ],
+            'proxy' => $this->proxy,
             RequestOptions::JSON => [
                 'receiver' => $to,
                 'text' => $text,
